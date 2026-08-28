@@ -6,17 +6,23 @@
 
 ## 1. Font source & licensing
 
-One web font, one system stack — chosen to keep the fallback test clean (a single point of
-failure, so any change on reload can be attributed to Fraunces specifically).
+**Preferred web font:** Fraunces
 
-| | Display face (web font) | Body face (system stack) |
-|---|---|---|
-| Family | Fraunces | system-ui sans (no web font) |
-| Source | Google Fonts (`fonts.googleapis.com`) | OS-installed fonts only |
-| Designer | Un-Type (Wei Huang, Kristyan Sarkis et al.) | n/a |
-| License | SIL Open Font License 1.1 | n/a — no font file requested |
-| Weights loaded | 400, 600, 700 (variable optical-size axis 9–144) | whatever weights the OS ships |
-| Requests the page makes | 1 stylesheet request to `fonts.googleapis.com/css2`, triggering `.woff2` requests to `fonts.gstatic.com` | none |
+**Source:** Google Fonts
+
+**License:** SIL Open Font License 1.1 (OFL-1.1)
+
+**Requested weights:** 400, 600, and 700
+
+**Font use:** Fraunces is used for display typography, including headings. Body text uses a system-font stack and does not require an additional web-font request.
+
+**Display fallback stack:** `"Fraunces", "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif`
+
+**Body stack:** `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`
+
+**Loading method:** Fraunces is requested through Google Fonts. The preferred-font failure condition was tested by blocking the Google Fonts request in Chrome DevTools and reloading the page.
+
+**Independent verification:** I independently checked the Fraunces licensing information and tested the font-loading and fallback behavior in Chrome DevTools.
 
 # Afterlight Journal - Font Loading and Fallbacks Test Record
 
