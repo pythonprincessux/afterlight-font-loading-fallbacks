@@ -30,7 +30,7 @@
     --fs-lead:     clamp(1.0625rem, 1rem + 0.35vw, 1.1875rem);   /* 17 -> 19px */
     --fs-h3:       clamp(1.1875rem, 1.05rem + 0.7vw, 1.4375rem); /* 19 -> 23px */
     --fs-h2:       clamp(1.5rem,    1.25rem + 1.4vw, 2.0625rem); /* 24 -> 33px */
-    --fs-h1:       clamp(2rem,      1.5rem + 2.8vw, 3.375rem);   /* 32 -> 54px */
+    --fs-h1:       clamp(1.875rem, 1.5rem + 2.8vw, 3.375rem);    /* 30 -> 54px */
 
     /* ---- interactive sizing (kept independent of the fluid scale
        so buttons never shrink illegibly at 320px) ---- */
