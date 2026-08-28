@@ -3,6 +3,7 @@
 **Name:** Kiara McRae
 **File:** `index.html` + `styles.css`
 
+Live Site Link:  https://pythonprincessux.github.io/afterlight-font-loading-fallbacks/
 
 ## 1. Font source & licensing
 
