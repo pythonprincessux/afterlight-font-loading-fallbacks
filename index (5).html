@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Type Specimen — Font Loading &amp; Fallbacks</title>
+
+<!--
+  FONT SOURCE
+  Display: Fraunces (Google Fonts) — OFL-1.1 licensed, by Un-Type / Google Fonts.
+  Body:    system-font stack (no web font request) — see test-record.md
+  for the requested file list and ai-disclosure.md for the AI-assistance note.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-head">
+    <div class="title">Type Specimen &amp; Test Record</div>
+    <div class="meta">Fraunces (display) + system sans (body)</div>
+  </header>
+
+  <!-- ============================================================
+       1. HERO / H1 — the most metric-sensitive role
+       ============================================================ -->
+  <section>
+    <p class="eyebrow">Practice — Font Loading &amp; Fallbacks</p>
+    <h1>A type system that still works when the good font doesn't load</h1>
+    <p class="lead">This page pairs a licensed display serif with a licensed body sans, backed by
+      system-font fallback stacks. Every size below is a token, not a one-off value, so the whole
+      page can be re-tuned from one place.</p>
+    <div class="btn-row">
+      <a class="btn" href="#">Primary action</a>
+      <a class="btn secondary" href="#">Secondary action</a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       2. HEADING HIERARCHY
+       ============================================================ -->
+  <section>
+    <p class="eyebrow">Hierarchy</p>
+    <h2>Section heading (H2)</h2>
+    <h3>Subsection heading (H3)</h3>
+    <p>Body copy sits under the headings at the base size and default line height. The measure is
+      capped at <code>66ch</code> so lines stay a comfortable length regardless of viewport width —
+      this matters as much at 1440px as it does at 320px, just in the opposite direction.</p>
+  </section>
+
+  <!-- ============================================================
+       3. LONG-FORM TEXT
+       ============================================================ -->
+  <section>
+    <p class="eyebrow">Long-form</p>
+    <h3>Reading a full paragraph</h3>
+    <p>Font loading strategy affects more than which glyphs appear on screen — it changes line
+      breaks, paragraph height, and how quickly a reader can scan a page. A fallback stack should
+      be chosen with metric compatibility in mind: similar x-height, similar average character
+      width, similar cap height. Two stacks that look nothing alike but happen to share those
+      three measurements will reflow a paragraph almost identically, which is the real goal of
+      this exercise — not matching the fallback's <em>style</em>, but matching its <em>shape</em>.</p>
+    <p>When that match is close, blocking the web font barely disturbs the layout. When it's
+      loose, headlines wrap onto an extra line, buttons that fit one word now fit none, and the
+      vertical rhythm of the page drifts as every element reflows against a slightly taller or
+      shorter fallback line.</p>
+  </section>
+
+  <!-- ============================================================
+       4. METADATA
+       ============================================================ -->
+  <section>
+    <p class="eyebrow">Metadata</p>
+    <h3>Byline &amp; timestamp treatment</h3>
+    <p class="meta">Written by K. McRae · Posted 08/28/2026 · 6 min read · Updated 09/02/2026</p>
+    <p class="meta">Rev. 1.3 · 214 words · draft</p>
+  </section>
+
+  <!-- ============================================================
+       5. BUTTONS
+       ============================================================ -->
+  <section>
+    <p class="eyebrow">Buttons</p>
+    <h3>Interactive controls</h3>
+    <div class="btn-row">
+      <a class="btn" href="#">Save changes</a>
+      <a class="btn secondary" href="#">Cancel</a>
+      <a class="btn secondary" href="#">Learn more →</a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. COMPACT LABELS
+       ============================================================ -->
+  <section>
+    <p class="eyebrow">Compact labels</p>
+    <h3>Tags &amp; status chips</h3>
+    <div class="btn-row">
+      <span class="tag">Draft</span>
+      <span class="tag">In review</span>
+      <span class="tag">Published</span>
+      <span class="tag">Archived</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. TYPE SCALE REFERENCE (for the test record)
+       ============================================================ -->
+  <section>
+    <p class="eyebrow">Scale reference</p>
+    <h3>Every step, for comparison at each viewport</h3>
+    <div class="swatch-row">
+      <div><span class="fs-label">--fs-label</span><div class="eyebrow" style="margin:0;">Compact label text</div></div>
+      <div><span class="fs-label">--fs-meta</span><div class="meta">Metadata line at this size</div></div>
+      <div><span class="fs-label">--fs-small</span><div style="font-size:var(--fs-small);">Small utility text at this size</div></div>
+      <div><span class="fs-label">--fs-body</span><div style="font-size:var(--fs-body);">Body paragraph text at this size</div></div>
+      <div><span class="fs-label">--fs-lead</span><div style="font-size:var(--fs-lead); font-family:var(--font-body);">Lead paragraph text at this size</div></div>
+      <div><span class="fs-label">--fs-h3</span><div style="font-size:var(--fs-h3); font-family:var(--font-display); font-weight:600;">Subsection heading</div></div>
+      <div><span class="fs-label">--fs-h2</span><div style="font-size:var(--fs-h2); font-family:var(--font-display); font-weight:600;">Section heading</div></div>
+      <div><span class="fs-label">--fs-h1</span><div style="font-size:var(--fs-h1); font-family:var(--font-display); font-weight:700;">Display heading</div></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       8. TOKEN TABLE
+       ============================================================ -->
+  <section>
+    <p class="eyebrow">Tokens</p>
+    <h3>Full token list</h3>
+    <table class="token-table">
+      <thead><tr><th>Token</th><th>Value</th><th>Role</th></tr></thead>
+      <tbody>
+        <tr><td><code>--font-display</code></td><td>Fraunces → Georgia → serif</td><td>H1–H3</td></tr>
+        <tr><td><code>--font-body</code></td><td>system-ui sans stack (no web font) → sans-serif</td><td>Body, meta, buttons, labels</td></tr>
+        <tr><td><code>--fs-base</code></td><td>1rem (16px)</td><td>Browser default anchor</td></tr>
+        <tr><td><code>--lh-body</code></td><td>1.55</td><td>Paragraphs</td></tr>
+        <tr><td><code>--lh-display</code></td><td>1.14</td><td>Headings</td></tr>
+        <tr><td><code>--measure-body</code></td><td>66ch</td><td>Paragraph max-width</td></tr>
+        <tr><td><code>--fs-label … --fs-h1</code></td><td>clamp() fluid scale, 8 steps</td><td>All text roles</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="note">
+    Type specimen for ASU GIT 337 — Practice: Font Loading and Fallbacks.
+    Font: Fraunces, SIL Open Font License 1.1, served via Google Fonts. Body text uses a
+    system-font stack (no web font request).
+    See <code>test-record.md</code> for the font source/license note, viewport &amp; zoom testing,
+    and blocked-font evidence, and <code>ai-disclosure.md</code> for the AI assistance and
+    verification record.
+  </footer>
+
+</div>
+</body>
+</html>
